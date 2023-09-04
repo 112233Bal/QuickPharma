@@ -10,6 +10,13 @@ const PORT = process.env.PORT || 4000;
 const middleware = (req, res, next) => {
   next();
 };
+app.use(cors(
+  {
+    origin: ['https://deploy-mern-1whq.vercel.app'],
+    methods: ["POST","GET"],
+    credentials:true
+  }
+))
 
 
 app.use(bodyParser.json());
