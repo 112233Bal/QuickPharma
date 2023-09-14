@@ -12,7 +12,7 @@ const middleware = (req, res, next) => {
 };
 app.use(cors(
   {
-    origin: ['https://deploy-mern-1whq.vercel.app'],
+    origin: "*",
     methods: ["POST","GET"],
     credentials:true
   }

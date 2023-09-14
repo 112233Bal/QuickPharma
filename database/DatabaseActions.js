@@ -5,6 +5,8 @@ const cors = require("cors")
 router.use(cors());
 
 
+router.use(cors({ origin: "*" }));
+
 router.post('/insertUser', async (req, res) => {
   try {
     const User = new Users(req.body)
